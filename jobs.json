@@ -1,0 +1,92 @@
+[
+    {
+        "Carrièremogelijkheid": "UX Expert",
+        "Strengths": "Creatief, Analytisch, Empathisch",
+        "WeaknessesExclusion": ["Chaotisch", "Onzeker", "Moeite met plannen"],
+        "Skills": "Photoshop, Illustrator, Trello"
+    },
+    {
+        "Carrièremogelijkheid": "UI Expert",
+        "Strengths": "Creatief, Nauwkeurig, Innovatief",
+        "WeaknessesExclusion": ["Slordig", "Chaotisch"],
+        "Skills": "Figma, InDesign, After Effects"
+    },
+    {
+        "Carrièremogelijkheid": "Scrum Master",
+        "Strengths": "Leiderschap, Gestructureerd, Samenwerkingsgericht",
+        "WeaknessesExclusion": ["Weerstand tegen verandering", "Moeite met plannen", "Stressgevoelig"],
+        "Skills": "Scrum, Trello, Excel"
+    },
+    {
+        "Carrièremogelijkheid": "Content Manager",
+        "Strengths": "Nauwkeurig, Presentatievaardig, Probleemoplossend",
+        "WeaknessesExclusion": ["Snel afgeleid", "Uitstelgedrag"],
+        "Skills": "WordPress, Excel, Canva"
+    },
+    {
+        "Carrièremogelijkheid": "Grafisch Vormgever",
+        "Strengths": "Creatief, Teamspeler, Flexibel",
+        "WeaknessesExclusion": ["Gebrek aan doorzettingsvermogen", "Stressgevoelig"],
+        "Skills": "Photoshop, Illustrator, Blender"
+    },
+    {
+        "Carrièremogelijkheid": "Content Creator",
+        "Strengths": "Creatief, Presentatievaardig, Gedreven",
+        "WeaknessesExclusion": ["Moeite met autoriteit", "Onzeker"],
+        "Skills": "TikTok, Photoshop, Canva"
+    },
+    {
+        "Carrièremogelijkheid": "Webdesigner",
+        "Strengths": "Analytisch, Nauwkeurig, Zelfstandig",
+        "WeaknessesExclusion": ["Uitstelgedrag", "Chaotisch"],
+        "Skills": "HTML/CSS, WordPress, Figma"
+    },
+    {
+        "Carrièremogelijkheid": "Styling Specialist",
+        "Strengths": "Flexibel, Empathisch, Teamspeler",
+        "WeaknessesExclusion": ["Onzeker", "Snel afgeleid", "Vermijdt zichtbaarheid"],
+        "Skills": "InDesign, Illustrator, TikTok"
+    },
+    {
+        "Carrièremogelijkheid": "Digital Project Manager",
+        "Strengths": "Gestructureerd, Leiderschap, Flexibel",
+        "WeaknessesExclusion": ["Uitstelgedrag", "Twijfelachtig", "Chaotisch"],
+        "Skills": "Trello, ChatGPT, Excel"
+    },
+    {
+        "Carrièremogelijkheid": "Motion Designer",
+        "Strengths": "Creatief, Probleemoplossend, Innovatief",
+        "WeaknessesExclusion": ["Moeite met gezag", "Stressgevoelig"],
+        "Skills": "Blender, After Effects, Photoshop"
+    },
+    {
+        "Carrièremogelijkheid": "Creative Producer",
+        "Strengths": "Gedreven, Leiderschap, Teamspeler",
+        "WeaknessesExclusion": ["Chaotisch", "Moeite met plannen", "Minder communicatief"],
+        "Skills": "ChatGPT, Excel, After Effects"
+    },
+    {
+        "Carrièremogelijkheid": "Marketing Specialist",
+        "Strengths": "Analytisch, Probleemoplossend, Innovatief",
+        "WeaknessesExclusion": ["Weerstand tegen verandering", "Uitstelgedrag", "Onzeker"],
+        "Skills": "Excel, Canva, WordPress"
+    },
+    {
+        "Carrièremogelijkheid": "SEO Specialist",
+        "Strengths": "Gestructureerd, Nauwkeurig, Analytisch",
+        "WeaknessesExclusion": ["Snel afgeleid", "Vermijdt zichtbaarheid", "Uitstelgedrag"],
+        "Skills": "SEO, Excel, ChatGPT"
+    },
+    {
+        "Carrièremogelijkheid": "Data Analyst",
+        "Strengths": "Analytisch, Probleemoplossend, Gedreven",
+        "WeaknessesExclusion": ["Gebrek aan doorzettingsvermogen", "Chaotisch", "Minder communicatief"],
+        "Skills": "Python, Excel, ChatGPT"
+    },
+    {
+        "Carrièremogelijkheid": "Front-End Developer",
+        "Strengths": "Creatief, Zelfstandig, Probleemoplossend",
+        "WeaknessesExclusion": ["Vermijdt zichtbaarheid", "Weerstand tegen verandering", "Snel afgeleid"],
+        "Skills": "HTML/CSS, Figma, Blender"
+    }
+]
