@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career choise</title>
+</head>
+<body>
+    <h1>Career Match Checker</h1>
+
+    <div>
+        <label for="strengths">Strengths (gescheiden door komma's):</label>
+        <input type="text" id="strengths" placeholder="Bijv. Creatief, Analytisch, Empathisch">
+    </div>
+    <div>
+        <label for="weaknesses">Weaknesses (gescheiden door komma's):</label>
+        <input type="text" id="weaknesses" placeholder="Bijv. Chaotisch, Onzeker, Moeite met plannen">
+    </div>
+    <div>
+        <label for="skills">Skills (gescheiden door komma's):</label>
+        <input type="text" id="skills" placeholder="Bijv. Photoshop, Illustrator, Trello">
+    </div>
+    <button onclick="findBestMatch()">Vind beste match</button>
+
+    <h2>Resultaten</h2>
+    <div id="results"></div>
+
+    <!-- Verwijzing naar extern JavaScript-bestand -->
+    <script src="script.js"></script>
+</body>
+</html>
