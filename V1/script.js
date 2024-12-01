@@ -1,7 +1,46 @@
+// Maak een object om de geselecteerde waarden voor elke categorie bij te houden
+let userSelections = {
+    strength: [],
+    weakness: [],
+    skill: []
+};
+
+// Toggle de selectie van een knop
+function toggleSelection(type, value) {
+    // Zoek de knop op basis van de categorie (type) en waarde
+    const button = document.querySelector(`button[data-type="${type}"][data-value="${value}"]`);
+
+    // Als de waarde al geselecteerd is, verwijder deze
+    if (userSelections[type].includes(value)) {
+        userSelections[type] = userSelections[type].filter(item => item !== value);
+        button.classList.remove('selected'); // Verwijder de 'selected' stijl
+    } else {
+        // Anders voeg de waarde toe aan de selectie
+        userSelections[type].push(value);
+        button.classList.add('selected'); // Voeg de 'selected' stijl toe
+    }
+
+    console.log(userSelections); // Optioneel: om de geselecteerde waarden in de console te zien
+}
+
+// Functie om de stijl van de knoppen bij te werken op basis van selectie
+function updateButtonStyles(type, value) {
+    const button = document.querySelector(`button[data-type="${type}"][data-value="${value}"]`);
+    if (button) {
+        // Voeg de 'selected' en 'active' klasse toe als de waarde is geselecteerd
+        if (userSelections[type].includes(value)) {
+            button.classList.add('selected', 'active');
+        } else {
+            button.classList.remove('selected', 'active');
+        }
+    }
+}
+
+// Functie om de beste match te vinden
 function findBestMatch() {
-    const userStrengths = document.getElementById('strengths').value.split(',').map(s => s.trim().toLowerCase());
-    const userWeaknesses = document.getElementById('weaknesses').value.split(',').map(w => w.trim().toLowerCase());
-    const userSkills = document.getElementById('skills').value.split(',').map(s => s.trim().toLowerCase());
+    const userStrengths = userSelections.strength;
+    const userWeaknesses = userSelections.weakness;
+    const userSkills = userSelections.skill;
 
     let bestMatch = '';
     let highestMatchPercentage = 0;
@@ -12,8 +51,6 @@ function findBestMatch() {
         .then(jobs => {
             jobs.forEach(job => {
                 const jobStrengths = job.Strengths.toLowerCase().split(', ').map(s => s.trim());
-
-                // Controleer of WeaknessesExclusion een string of array is
                 let jobWeaknessesExclusion = [];
                 if (typeof job.WeaknessesExclusion === 'string') {
                     jobWeaknessesExclusion = job.WeaknessesExclusion.toLowerCase().split(', ').map(w => w.trim());
@@ -21,10 +58,7 @@ function findBestMatch() {
                     jobWeaknessesExclusion = job.WeaknessesExclusion.map(w => w.toLowerCase().trim());
                 }
 
-                // Controleer of de gebruiker een zwakte heeft die overeenkomt met de WeaknessesExclusion van de job
                 const hasExcludedWeakness = userWeaknesses.some(weakness => jobWeaknessesExclusion.includes(weakness));
-
-                // Als de job een uitgesloten zwakte heeft, sla de job dan over
                 if (hasExcludedWeakness) {
                     return; // Skip deze baan
                 }
@@ -39,45 +73,33 @@ function findBestMatch() {
                     if (userStrengths.includes(strength)) matchCount++;
                 });
 
-                // Vergelijk weaknesses (let op, we vergelijken niet de uitgesloten weaknessexclusion meer)
-                userWeaknesses.forEach(weakness => {
-                    if (!jobWeaknessesExclusion.includes(weakness)) {
-                        // Als het geen uitgesloten zwakte is, telt het mee
-                        if (jobWeaknessesExclusion.includes(weakness)) matchCount++;
-                    }
-                });
-
                 // Vergelijk skills
                 jobSkills.forEach(skill => {
                     if (userSkills.includes(skill)) matchCount++;
                 });
 
-                // Bereken overeenkomstpercentage
                 const matchPercentage = (matchCount / totalCount) * 100;
 
-                // Sla de hoogste overeenkomst op
                 if (matchPercentage > highestMatchPercentage) {
                     highestMatchPercentage = matchPercentage;
                     bestMatch = job.Carrièremogelijkheid;
                 }
 
-                // Voeg resultaat toe aan een array in plaats van meteen naar de HTML
                 results.push({
                     job: job.Carrièremogelijkheid,
                     matchPercentage: matchPercentage
                 });
             });
 
-            // Sorteer de resultaten op percentage van hoog naar laag
+            // Sorteer de resultaten op percentage
             results.sort((a, b) => b.matchPercentage - a.matchPercentage);
 
-            // Toon de resultaten
             let resultsHTML = `<h3>Beste match: ${bestMatch} (${highestMatchPercentage.toFixed(2)}%)</h3>`;
             results.forEach(result => {
                 resultsHTML += `<p>${result.job}: ${result.matchPercentage.toFixed(2)}% overeenstemming</p>`;
             });
 
-            // Update de resultaten op de pagina
+            // Toon de resultaten
             document.getElementById('results').innerHTML = resultsHTML;
         })
         .catch(error => {

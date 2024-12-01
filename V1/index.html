@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Match Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Career Match Checker</h1>
+    </header>
+
+    <section id="strengths-section">
+        <h2>Strengths</h2>
+        <div class="button-container" id="strengths-container">
+            <button class="btn" data-type="strength" data-value="gestructureerd" onclick="toggleSelection('strength', 'gestructureerd')">Gestructureerd</button>
+            <button class="btn" data-type="strength" data-value="creatief" onclick="toggleSelection('strength', 'creatief')">Creatief</button>
+            <button class="btn" data-type="strength" data-value="analytisch" onclick="toggleSelection('strength', 'analytisch')">Analytisch</button>
+            <button class="btn" data-type="strength" data-value="zelfstandig" onclick="toggleSelection('strength', 'zelfstandig')">Zelfstandig</button>
+            <button class="btn" data-type="strength" data-value="samenwerkingsgericht" onclick="toggleSelection('strength', 'samenwerkingsgericht')">Samenwerkingsgericht</button>
+            <button class="btn" data-type="strength" data-value="nauwkeurig" onclick="toggleSelection('strength', 'nauwkeurig')">Nauwkeurig</button>
+            <button class="btn" data-type="strength" data-value="stressbestendig" onclick="toggleSelection('strength', 'stressbestendig')">Stressbestendig</button>
+            <button class="btn" data-type="strength" data-value="leiderschap tonen" onclick="toggleSelection('strength', 'leiderschap tonen')">Leiderschap tonen</button>
+            <button class="btn" data-type="strength" data-value="presentatievaardig" onclick="toggleSelection('strength', 'presentatievaardig')">Presentatievaardig</button>
+            <button class="btn" data-type="strength" data-value="innovatief" onclick="toggleSelection('strength', 'innovatief')">Innovatief</button>
+            <button class="btn" data-type="strength" data-value="empatisch" onclick="toggleSelection('strength', 'empatisch')">Empatisch</button>
+            <button class="btn" data-type="strength" data-value="teamspeler" onclick="toggleSelection('strength', 'teamspeler')">Teamspeler</button>
+            <button class="btn" data-type="strength" data-value="probleemoplossend" onclick="toggleSelection('strength', 'probleemoplossend')">Probleemoplossend</button>
+            <button class="btn" data-type="strength" data-value="flexibel" onclick="toggleSelection('strength', 'flexibel')">Flexibel</button>
+            <button class="btn" data-type="strength" data-value="gedreven" onclick="toggleSelection('strength', 'gedreven')">Gedreven</button>
+        </div>
+    </section>
+
+    <section id="weaknesses-section">
+        <h2>Weaknesses</h2>
+        <div class="button-container" id="weaknesses-container">
+            <button class="btn" data-type="weakness" data-value="slordig" onclick="toggleSelection('weakness', 'slordig')">Slordig</button>
+            <button class="btn" data-type="weakness" data-value="moeite met plannen" onclick="toggleSelection('weakness', 'moeite met plannen')">Moeite met plannen</button>
+            <button class="btn" data-type="weakness" data-value="chaotisch" onclick="toggleSelection('weakness', 'chaotisch')">Chaotisch</button>
+            <button class="btn" data-type="weakness" data-value="onzeker" onclick="toggleSelection('weakness', 'onzeker')">Onzeker</button>
+            <button class="btn" data-type="weakness" data-value="gebrek aan creativiteit" onclick="toggleSelection('weakness', 'gebrek aan creativiteit')">Gebrek aan creativiteit</button>
+            <button class="btn" data-type="weakness" data-value="weerstand tegen verandering" onclick="toggleSelection('weakness', 'weerstand tegen verandering')">Weerstand tegen verandering</button>
+            <button class="btn" data-type="weakness" data-value="moeite met autoriteit" onclick="toggleSelection('weakness', 'moeite met autoriteit')">Moeite met autoriteit</button>
+            <button class="btn" data-type="weakness" data-value="vermijdt zichtbaarheid" onclick="toggleSelection('weakness', 'vermijdt zichtbaarheid')">Vermijdt zichtbaarheid</button>
+            <button class="btn" data-type="weakness" data-value="twijfelachtig" onclick="toggleSelection('weakness', 'twijfelachtig')">Twijfelachtig</button>
+            <button class="btn" data-type="weakness" data-value="minder communicatief vaardig" onclick="toggleSelection('weakness', 'minder communicatief vaardig')">Minder communicatief vaardig</button>
+            <button class="btn" data-type="weakness" data-value="stressgevoelig" onclick="toggleSelection('weakness', 'stressgevoelig')">Stressgevoelig</button>
+            <button class="btn" data-type="weakness" data-value="snel afgeleid" onclick="toggleSelection('weakness', 'snel afgeleid')">Snel afgeleid</button>
+            <button class="btn" data-type="weakness" data-value="uitstelgedrag" onclick="toggleSelection('weakness', 'uitstelgedrag')">Uitstelgedrag</button>
+            <button class="btn" data-type="weakness" data-value="gebrek aan doorzettingsvermogen" onclick="toggleSelection('weakness', 'gebrek aan doorzettingsvermogen')">Gebrek aan doorzettingsvermogen</button>
+            <button class="btn" data-type="weakness" data-value="niet flexibel" onclick="toggleSelection('weakness', 'niet flexibel')">Niet flexibel</button>
+        </div>
+    </section>
+
+    <section id="skills-section">
+        <h2>Skills</h2>
+        <div class="button-container" id="skills-container">
+            <button class="btn" data-type="skill" data-value="drag and drop tools" onclick="toggleSelection('skill', 'drag and drop tools')">Drag and Drop Tools</button>
+            <button class="btn" data-type="skill" data-value="scrum" onclick="toggleSelection('skill', 'scrum')">Scrum</button>
+            <button class="btn" data-type="skill" data-value="blender" onclick="toggleSelection('skill', 'blender')">Blender</button>
+            <button class="btn" data-type="skill" data-value="photoshop" onclick="toggleSelection('skill', 'photoshop')">Photoshop</button>
+            <button class="btn" data-type="skill" data-value="wordpress" onclick="toggleSelection('skill', 'wordpress')">WordPress</button>
+            <button class="btn" data-type="skill" data-value="chatgpt" onclick="toggleSelection('skill', 'chatgpt')">ChatGPT</button>
+            <button class="btn" data-type="skill" data-value="trello" onclick="toggleSelection('skill', 'trello')">Trello</button>
+            <button class="btn" data-type="skill" data-value="indesign" onclick="toggleSelection('skill', 'indesign')">InDesign</button>
+            <button class="btn" data-type="skill" data-value="illustrator" onclick="toggleSelection('skill', 'illustrator')">Illustrator</button>
+            <button class="btn" data-type="skill" data-value="tiktok marketing" onclick="toggleSelection('skill', 'tiktok marketing')">TikTok Marketing</button>
+            <button class="btn" data-type="skill" data-value="excel" onclick="toggleSelection('skill', 'excel')">Excel</button>
+            <button class="btn" data-type="skill" data-value="canva" onclick="toggleSelection('skill', 'canva')">Canva</button>
+            <button class="btn" data-type="skill" data-value="after effects" onclick="toggleSelection('skill', 'after effects')">After Effects</button>
+        </div>
+    </section>
+
+    <footer>
+        <button onclick="findBestMatch()">Vind de beste match</button>
+        <div id="results"></div>
+    </footer>
+
+    <button onclick="resetBtn()">Reset</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
